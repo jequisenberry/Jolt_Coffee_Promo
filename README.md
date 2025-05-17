@@ -10,7 +10,7 @@ A responsive HTML email sale promotion - portfolio project.
 6. Contact
 
 ## Overview
-This project features a dynamically responsive design created to showcase a fall sale promotion for the mock company, Jolt Coffee. The email template highlights a sleek, modern layout optimized for consistent rendering across major email clients. Its responsive design adapts seamlessly to mobile, tablet, and desktop screens. Additionally, the template incorporates dark mode support, aligning with user browser preferences to deliver a user-friendly experience designed to drive customer engagement.
+This project highlights a dynamically responsive design created to promote a fall sale for the mock company, Jolt Coffee. Optimized for consistent rendering across major email clients, the template seamlessly adapts to mobile, tablet, and desktop screens. It also features dark mode support, aligning with user browser preferences to ensure a user-friendly experience that enhances customer engagement.
 
 ## 2. Features
 - Cross-Client Compatibility: Optimized for consistent rendering across major email clients.
