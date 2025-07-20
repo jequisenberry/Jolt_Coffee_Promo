@@ -92,6 +92,15 @@ const Theme_Handler = {
                 }
             ]
         },
+        {
+            element: ".header-footer-container a",
+            styles: [
+                {
+                    style: "color",
+                    value: {light: "#ffffff"  , dark: "#e0e0e0"}
+                }
+            ]
+        },
 
         // CTA
         {
