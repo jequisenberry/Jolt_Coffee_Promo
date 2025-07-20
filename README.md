@@ -23,7 +23,8 @@ This project highlights a dynamically responsive design created to promote a fal
     2. Tablet devices
     3. Desktop screens
 - Adaptive Dark Mode: Theme dynamically adjusts to user browser preferences.
-- Clean Aesthetic: A professional, visually appealing design suitable for branding.
+
+- JS-Based Theme Toggle (Portfolio Only): A JavaScript switcher is included for previewing light/dark modes in this portfolio display. (Note: This functionality is for demonstration only; JavaScript is not supported in live email clients.)
 
 ## 3.Purpose
 This project serves to showcase:

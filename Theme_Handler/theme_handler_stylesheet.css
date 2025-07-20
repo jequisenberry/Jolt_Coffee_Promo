@@ -1,0 +1,154 @@
+:root {
+    /* color scheme */
+    --color-scheme-white:   rgba(255, 255, 255, 0.8);
+    --color-scheme-yellow:  #47f013;
+    --color-scheme-blue:    #30308a;
+    --color-scheme-black:   #272727;
+
+    /* Animation Speed */
+    --animation-speed:      0.4s;
+
+    /* Drop Shadow */
+    --drop-shadow:          0.2em 0.1em 0.25em 0.2em rgba(0, 0, 0, 0.4);
+
+    /* Widget Settings */
+    --widget-inset:         2.5em 2.5em auto auto;
+    --widget-width:         4rem;
+    --widget-height:        1.8rem;
+
+    --outline-color:        var(--color-scheme-black);
+    --outline-width:        0.25rem;
+    --outline:              var(--outline-width) solid var(--outline-color);
+
+    /* Icon Colors */
+    --light-mode-icon:      var(--outline-color);
+    --light-mode-background:var(--color-scheme-yellow);
+    --dark-mode-icon:       var(--color-scheme-white);
+    --dark-mode-background: var(--color-scheme-blue);
+}
+
+/* Support older browsers by specifying defaults before var() if needed */
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+/* Main Container */
+.theme-ui-container {
+    position:       fixed;
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    inset:          var(--widget-inset);
+    z-index:        100;
+}
+
+/* Toggle Container */
+.theme-toggle-container {
+    cursor:         pointer;
+    position:       relative;
+    display:        flex;
+    overflow:       hidden;
+    width:          var(--widget-width);
+    height:         var(--widget-height);
+    border-radius:  var(--widget-height);
+    outline:        var(--outline);
+}
+
+/* Toggle Indicator */
+.theme-toggle-indicator {
+    position:       absolute;
+    inset:          0;
+    display:        block;
+    z-index:        10;
+    
+    width:          var(--widget-height);
+    height:         var(--widget-height);
+
+    border: 0.25em solid #f1f1f1;
+    border-bottom-color: #9c9c9c;
+    border-right-color:  #9c9c9c;
+
+    outline:        var(--outline);
+    border-radius:  var(--widget-height);
+    background:     #d3d3d3;
+
+    box-shadow:         var(--drop-shadow);
+    -webkit-box-shadow: var(--drop-shadow);
+    -moz-box-shadow:    var(--drop-shadow);
+    
+    transition:         inset var(--animation-speed) ease-in-out;
+    -webkit-transition: inset var(--animation-speed) ease-in-out;
+    -moz-transition:    inset var(--animation-speed) ease-in-out;
+}
+
+/* Indicator position for dark mode */
+.theme-toggle-indicator-dark {
+    inset: 0 0 0 calc(var(--widget-width) - var(--widget-height));
+}
+
+/* Icon drop state */
+.icon-down {
+    inset: auto 0 -1.5rem 0 !important;
+}
+
+#dark-mode-icon {
+    color: var(--dark-mode-icon);
+}
+
+#light-mode-icon {
+    color: var(--light-mode-icon);
+}
+
+/* Toggle Background */
+.theme-toggle-background-container {
+    display:            flex;
+    flex-direction:     row;
+    align-items:        center;
+    width:              100%;
+    background:         var(--light-mode-background);
+    box-shadow:         inset var(--drop-shadow);
+    -webkit-box-shadow: inset var(--drop-shadow);
+    -moz-box-shadow:    inset var(--drop-shadow);
+
+    transition:         background-color var(--animation-speed);
+    -webkit-transition: background-color var(--animation-speed);
+    -moz-transition:    background-color var(--animation-speed);
+}
+
+/* Icon Container */
+.mode-icon-container {
+    position:           relative;
+    overflow:           hidden;
+    width:              100%;
+    height:             calc(var(--widget-height) * 0.8);
+}
+
+.mode-icon-container i {
+    user-select:        none;
+    -webkit-user-select:none;
+    -moz-user-select:   none;
+    -ms-user-select:    none;
+
+    position:           absolute;
+    inset:              auto 0 0 0;
+    text-align:         center;
+    font-size:          calc(var(--widget-height) * 0.75);
+    line-height:        1;
+    
+    transition:         all var(--animation-speed) ease-out;
+    -webkit-transition: all var(--animation-speed) ease-out;
+    -moz-transition:    all var(--animation-speed) ease-out;
+}
+
+/* Dark mode background */
+.theme-toggle-background-dark {
+    background:         var(--dark-mode-background);
+}
